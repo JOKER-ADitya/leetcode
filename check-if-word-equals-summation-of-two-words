@@ -1,0 +1,19 @@
+bool isSumEqual(string firstWord, string secondWord, string targetWord) {
+        int firstnum = sumofC(firstWord);
+        int secondnum = sumofC(secondWord);
+        int targetnum = sumofC(targetWord);
+        if(firstnum+secondnum==targetnum){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
+    int sumofC(string f){  //gets the string
+        int num=0;
+        for(char letter:f){
+            num = num*10+letter-'a';  // first convert the string into number. then adds to num and again multiplies it back
+        }
+        return num;
+    }
